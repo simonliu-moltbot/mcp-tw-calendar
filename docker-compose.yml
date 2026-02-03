@@ -1,0 +1,9 @@
+services:
+  mcp-calendar:
+    build: .
+    image: mcp-tw-calendar
+    ports:
+      - "${PORT:-8000}:8000"
+    env_file:
+      - .env
+    restart: always
